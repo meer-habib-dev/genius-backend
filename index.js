@@ -60,6 +60,10 @@ async function run() {
 }
 run().catch(console.dir);
 
+app.get("/", (req, res) => {
+  res.send("Running genius server");
+});
+
 app.listen(port, () => {
   console.log("Listening to port of:", port);
 });
